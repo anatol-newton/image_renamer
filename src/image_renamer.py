@@ -18,29 +18,29 @@ __version__ = "0.0.1"
 
 def main():
     parser = ArgumentParser(
-        prog='Image Renamer',
+        prog='image_renamer.py',
         description='Rename images based on their Exif data',
         epilog=f'Image Renamer v{__version__}')
 
     parser.add_argument(
+        "-v",
+        "--verbose",
+        help="increase output verbosity",
+        action="store_true"
+    )
+
+    parser.add_argument(
         "--source",
         "-s",
-        help="Data source folder",
+        help="specify the source folder (folder containing the input images)",
         default=environ.get("IMAGERENAMER_SOURCE", "."),
     )
 
     parser.add_argument(
         "--output",
         "-o",
-        help="Data output folder",
+        help="specify the data output folder (where the renamed files will be saved)",
         default=environ.get("IMAGERENAMER_OUTPUT", "./out"),
-    )
-
-    parser.add_argument(
-        "--verbose",
-        "-v",
-        help="increase output verbosity",
-        action="store_true"
     )
 
     argcomplete.autocomplete(parser)
