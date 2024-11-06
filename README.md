@@ -44,6 +44,7 @@ options:
 ```
 
 ## Version
-### v0.0.1
+### v1.0.0
 - CLI added
 - base functionality
+- allow for custom naming format

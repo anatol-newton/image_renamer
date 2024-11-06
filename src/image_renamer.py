@@ -13,7 +13,7 @@ from PIL import Image, ExifTags
 from PIL.Image import Exif
 from filetype import is_image
 
-__version__ = "0.0.1"
+__version__ = "1.0.0"
 
 
 def main():
